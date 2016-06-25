@@ -1,0 +1,31 @@
+<section id="userCreation">
+    <section id="userCreationStep-1" ng-if="creationStep == 1">
+        <section id="userPhoto">
+            <img src="/images/MaleAvatar.png" alt="">
+        </section>
+
+         <section class="inputContainer">
+            <label for="userFullName">שם מלא</label>
+            <input class="loginInput" ng-model="userName" type="text" id="userFullName">
+        </section>
+        
+        <section id="dateOfBirth">
+            <input type="date">
+        </section>
+
+        <section id="gender">
+            <span class="toggle">
+                <input type="checkbox">
+            <label data-off="זכר" data-on="נקבה"></label>
+            </span>
+        </section>
+    </section>
+
+    <section id="userCreationStep-2" ng-if="creationStep == 2">
+
+    </section>
+
+    <section id="userCreationStep-3" ng-if="creationStep == 3">
+
+    </section>
+</section>

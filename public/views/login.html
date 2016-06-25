@@ -1,0 +1,40 @@
+<section id="loginContainer">
+    
+    <section id="logo">
+        <img src="/images/myFMF_Logo.png" alt="">
+    </section>
+
+
+    <section id="inputsSection">
+
+        <span class="inputContainer">
+            <label for="userFullName" ng-if="signUpMode">שם מלא</label>
+            <input class="loginInput" ng-model="user.name" type="text" id="userFullName" ng-if="signUpMode">
+        </span>
+
+        <span class="inputContainer">
+            <label for="userEmail">אימייל</label>
+            <input class="loginInput" ng-model="user.email" type="email" id="userEmail">
+        </span>
+
+        <span class="inputContainer">
+            <label for="userPassword">סיסמה</label>
+            <input class="loginInput" ng-model="user.password" type="password" id="userPassword">
+        </span>
+
+    <section id="noAccount" ng-show="!signUpMode">
+        <span>לא רשום?</span>
+        <a ng-click="signUpMode = true;">הרשם כעת!</a>
+    </section>
+
+    <button class="loginBtn md-raised" ng-click="logIn()" ng-if="!signUpMode">התחבר</button>
+
+
+    <button class="loginBtn md-raised" ng-click="signUp()" ng-if="signUpMode">הרשם</button>
+</section>
+
+    <!--<md-button class="loginBtn md-raised" ng-click="logOut()">התנתק</md-button>-->
+
+
+
+</section>
